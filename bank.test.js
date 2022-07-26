@@ -2,7 +2,7 @@ const Bankaccount = require("./Bank");
 const Bankdeposit = require("./Bankdeposit");
 const Bankwithdrawal = require("./Bankwithdrawal");
 
-describe(Bankaccount, () => {
+describe (Bankaccount, () => {
   it("shows the statement with no transactions", () => {
     let account = new Bankaccount();
     expect(account.statement()).toEqual("date || credit || debit || balance");
