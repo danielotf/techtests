@@ -1,6 +1,8 @@
 class Bankwithdrawal {
   constructor(x, y) {
+    // withdrawal is passed as an integer
     this.withdrawal = x;
+    // the date is passed as a string
     this.date = y;
   }
   amount_withdrawn() {
@@ -8,7 +10,8 @@ class Bankwithdrawal {
   }
 
   withdrawal_date() {
-    return this.date;
+    let date = this.date.replace(/-/g, "/");
+    return date;
   }
 }
 module.exports = Bankwithdrawal;

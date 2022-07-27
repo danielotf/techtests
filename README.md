@@ -47,8 +47,7 @@ nvm use node
 npm init -y
 
 # Add the jest package to our project(this will update package.json and package-lock.json)
-
-    npm add jest
+npm add jest
 
 # Run our tests
 
