@@ -35,7 +35,7 @@ describe(Bankaccount, () => {
   it("shows a debit of 500 on 10-01-2023 ", () => {
     let account = new Bankaccount();
     let debit = new Banktransaction(500, "14-01-2023");
-    let account_statement = account.withdrawal(debit);
+    let account_statement = account.withdraw(debit);
     let statement = new Bankstatement();
     expect(statement.print(account_statement)).toEqual(
       "date || credit || debit || balance\n14/01/2023 ||  ||500.00 || -500.00"
@@ -49,7 +49,7 @@ describe(Bankaccount, () => {
     let credit2 = new Banktransaction(2000, "13-01-2023");
     account.deposit(credit2);
     let debit = new Banktransaction(500, "14-01-2023");
-    let account_statement = account.withdrawal(debit);
+    let account_statement = account.withdraw(debit);
     let statement = new Bankstatement();
     expect(statement.print(account_statement)).toEqual(
       "date || credit || debit || balance\n14/01/2023 ||  ||500.00 || 2500.00\n13/01/2023 || 2000.00 || || 3000.00\n10/01/2023 || 1000.00 || || 1000.00"

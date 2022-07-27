@@ -10,20 +10,20 @@ class Bankaccount {
     return (this.layout =
       "\n" +
       `${credit.transaction_date()} || ${credit
-        .amount_deposited()
+        .deposit_amount()
         .toFixed(2)} || || ${(this.balance += parseInt(
-        credit.amount_deposited(),
+        credit.deposit_amount(),
         10
       )).toFixed(2)}` +
       this.layout);
   }
-  withdrawal(debit) {
+  withdraw(debit) {
     return (this.layout =
       "\n" +
       `${debit.transaction_date()} ||  ||${debit
-        .amount_withdrawn()
+        .withdrawal_amount()
         .toFixed(2)} || ${(this.balance -= parseInt(
-        debit.amount_withdrawn(),
+        debit.withdrawal_amount(),
         10
       )).toFixed(2)}` +
       this.layout);

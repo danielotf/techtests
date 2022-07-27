@@ -30,9 +30,9 @@ I have one test file: Bank.test.js, and three other files, I used for the classe
 
 -The Bank.js file has a Bankaccount class which has a constructor that intiates a layout for the bank statement and also an initial balance of zero. Its first two functions, deposit, and withdrawal take one parameter each. These first two functions are also dependent on the Bankwithdrawal and Bankdeposit classes, which are in their respective JS files. The last function in the Bank file is the statement function which returns the layout of the Bankaccount with any transactions that may have occurred.
 
--The Bankdeposit class located in the Bankdeposit.js file has two functions amount_deposited() and date_deposited(), which return the date and time of the deposit transaction respectively.
+-The Banktransaction class located in the Banktransaction.js file has three functions deposit_amount() and withdrawal_amount(), transaction_date() which return the the amount to deposit, withdraw and also the date of the transaction. 
 
--The Bankwithdrawal class located in the Bankwithdrawal.js file has two functions amount_withdrawn() and withdrawal_date(), which return the date and time of the withdrawal transaction respectively.
+-The Bankstatement class located in the Bankstatement.js file has one function print(account_statement), which returns the bank statement. 
 
 # INSTALLATION AND RUNNING OF TESTS
 

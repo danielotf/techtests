@@ -8,10 +8,10 @@ class Banktransaction {
     this.date = transaction_date;
   }
 
-  amount_deposited() {
+  deposit_amount() {
     return this.transaction;
   }
-  amount_withdrawn() {
+  withdrawal_amount() {
     return this.transaction;
   }
 
