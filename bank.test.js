@@ -10,7 +10,7 @@ describe(Bankaccount, () => {
 
   it("shows a deposit of 1000 on 10-01-2023 ", () => {
     let account = new Bankaccount();
-    let credit = new Bankdeposit(1000.0, "10-01-2023");
+    let credit = new Bankdeposit(1000, "10-01-2023");
     account.deposit(credit);
     expect(account.statement()).toEqual(
       "date || credit || debit || balance\n10/01/2023 || 1000.00 || || 1000.00"
@@ -24,7 +24,7 @@ describe(Bankaccount, () => {
     let credit2 = new Bankdeposit(2000, "13-01-2023");
     account.deposit(credit2);
     expect(account.statement()).toEqual(
-      "date || credit || debit || balance\n10/01/2023 || 1000.00 || || 1000.00\n13/01/2023 || 2000.00 || || 3000.00"
+      "date || credit || debit || balance\n13/01/2023 || 2000.00 || || 3000.00\n10/01/2023 || 1000.00 || || 1000.00"
     );
   });
 
@@ -46,7 +46,7 @@ describe(Bankaccount, () => {
     let debit = new Bankwithdrawal(500, "14-01-2023");
     account.withdrawal(debit);
     expect(account.statement()).toEqual(
-      "date || credit || debit || balance\n10/01/2023 || 1000.00 || || 1000.00\n13/01/2023 || 2000.00 || || 3000.00\n14/01/2023 ||  ||500.00 || 2500.00"
+      "date || credit || debit || balance\n14/01/2023 ||  ||500.00 || 2500.00\n13/01/2023 || 2000.00 || || 3000.00\n10/01/2023 || 1000.00 || || 1000.00"
     );
   });
 });
